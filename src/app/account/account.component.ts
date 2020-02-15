@@ -11,7 +11,7 @@ export class AccountComponent {
   @Input() account: { name: string, status: string };
   @Input() id: number;
 
-  constructor(private acctService: AccountService) { }
+  constructor(private acctService: AccountService) {}
 
   onSetTo(status: string) {
     this.acctService.changeStatus(this.id, status);

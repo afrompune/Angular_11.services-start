@@ -18,6 +18,8 @@ export class NewAccountComponent {
 
   onCreateAccount(accountName: string, accountStatus: string) {
     this.acctService.addAccount(accountName, accountStatus);
+    this.acctService.statusChanged.emit("Added Account : " + accountName +
+      ", with status : " + accountStatus);
   }
 
 
